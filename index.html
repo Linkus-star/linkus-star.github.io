@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - OS Style</title>
+    <link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+    <!-- Background -->
+    <div class="background">
+        <div class="background-image"></div>
+        <div class="stars" id="stars"></div>
+        <!-- logo de mon portfolio sur l'arrière-plan dernière les onglets -->
+        <div class="background-logo" src="src/logo.png"></div>
+    </div>
+
+    <!-- Desktop Icons -->
+    <div class="desktop-icons">
+        <button class="desktop-icon" data-window="contact">
+            <div class="icon-image">👤</div>
+            <span class="icon-label">Contact.exe</span>
+        </button>
+
+        <button class="desktop-icon" data-window="about">
+            <div class="icon-image icon-fuchsia">📄</div>
+            <span class="icon-label">A_propos.txt</span>
+        </button>
+
+        <button class="desktop-icon" data-window="projects">
+            <div class="icon-image">📁</div>
+            <span class="icon-label">Projets</span>
+        </button>
+
+        <button class="desktop-icon" data-window="skills">
+            <div class="icon-image icon-fuchsia">⭐</div>
+            <span class="icon-label">Compétences.dat</span>
+        </button>
+    </div>
+
+    <!-- Windows Container -->
+    <div id="windows-container"></div>
+
+    <!-- Taskbar -->
+    <div class="taskbar">
+        <button class="start-button">
+            <div class="start-icon"></div>
+            <span>Start</span>
+        </button>
+
+        <div class="taskbar-divider"></div>
+
+        <button class="quick-launch" data-window="contact">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+        </button>
+
+        <button class="quick-launch" data-window="about">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+            </svg>
+        </button>
+
+        <button class="quick-launch" data-window="projects">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+            </svg>
+        </button>
+
+        <button class="quick-launch" data-window="skills">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
+                <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
+                <path d="M4 22h16"></path>
+                <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path>
+                <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path>
+                <path d="M18 2H6v7a6 6 0 0 0 12 0V2z"></path>
+            </svg>
+        </button>
+
+        <div class="taskbar-spacer"></div>
+
+        <div class="system-tray">
+            <div class="tray-volume">
+                <div class="volume-bar"></div>
+                <div class="volume-bar"></div>
+                <div class="volume-bar"></div>
+            </div>
+            <span class="tray-time" id="time">12:00</span>
+        </div>
+
+        <button class="power-button">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18.36 6.64a9 9 0 1 1-12.73 0"></path>
+                <line x1="12" y1="2" x2="12" y2="12"></line>
+            </svg>
+        </button>
+    </div>
+
+    <script src="src/script.js"></script>
+</body>
+</html>
