@@ -829,4 +829,19 @@ document.addEventListener('DOMContentLoaded', () => {
             startButton.classList.remove('active');
         }
     });
+
+	// Gestion du bouton Power (Extinction simulée)
+    const powerButton = document.querySelector('.power-button');
+    
+    powerButton.addEventListener('click', () => {
+        // ecran noir
+        const shutdownDiv = document.createElement('div');
+        shutdownDiv.className = 'shutdown-screen';
+        
+        document.body.appendChild(shutdownDiv);
+        
+        setTimeout(() => {
+            location.reload();
+        }, 3000);
+    });
 });
