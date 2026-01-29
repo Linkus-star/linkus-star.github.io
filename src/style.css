@@ -752,6 +752,28 @@ body {
     color: #83a548;
 }
 
+/* truc drôle */
+.shutdown-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #495c28;
+    font-family: 'Courier New', monospace;
+    font-size: 20px;
+    animation: fadeOut 0.3s ease-out;
+}
+
+.shutdown-screen::after {
+    content: "The system is shutting down...";
+}
+
 /* Responsive */
 @media (max-width: 390px) {
     .desktop-icons {
