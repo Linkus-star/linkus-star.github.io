@@ -281,7 +281,10 @@ function getWindowContent(windowId) {
                             <p>▪ MY SQL</p>
                         </div>
 						<div class="skill-item">
-                            <p>▪ WordPress/PrestaShop</p>
+                            <p>▪ WordPress</p>
+                        </div>
+						<div class="skill-item">
+                            <p>▪ Prestahop</p>
                         </div>
                         <!-- J'en ajouterai d'autres logiciels/langages si besoin -->
                     </div>
@@ -717,7 +720,7 @@ function getWindowContent(windowId) {
                 <hr style="border: 1px solid #789742; margin: 16px 0;">
 
                 <h3>Contexte</h3>
-                <p>Dans le cadre de la SAE 302, nous devions réaliser un motion design pour que La French Tech souhaite les voeux de fin d'année à l'ensemble de ses collaborateurs.</p>
+                <p>Dans le cadre de la SAE 302, nous devions réaliser en groupe un motion design pour que La French Tech souhaite les voeux de fin d'année à l'ensemble de ses collaborateurs.</p>
 
                 <h3>Vidéo</h3>
                 <video controls style="width: 100%; border: 2px solid white; margin-bottom: 12px; background: black;">
