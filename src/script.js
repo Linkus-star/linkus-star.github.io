@@ -280,6 +280,9 @@ function getWindowContent(windowId) {
                         <div class="skill-item">
                             <p>▪ MY SQL</p>
                         </div>
+						<div class="skill-item">
+                            <p>▪ WordPress/PrestaShop</p>
+                        </div>
                         <!-- J'en ajouterai d'autres logiciels/langages si besoin -->
                     </div>
 
@@ -721,8 +724,6 @@ function getWindowContent(windowId) {
                     <source src="src/Rendu_Final.mp4" type="video/mp4">
                     Votre navigateur ne prend pas en charge la lecture vidéo.
                 </video>
-                <p style="font-size: 13px; opacity: 0.9;">Placez votre fichier vidéo dans <strong>src/SAE302_FrenchTech.mp4</strong> pour l'afficher ici.</p>
-
                 <br>
                 <button class="ok-button" onclick="closeWindow('french_tech_voeux')">Fermer</button>
             </div>
