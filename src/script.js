@@ -12,7 +12,8 @@ let windows = {
     surf_truck: { isOpen: false, zIndex: 10 },
     bottine: { isOpen: false, zIndex: 10 },
     canidae: { isOpen: false, zIndex: 10 },
-    dashboard: { isOpen: false, zIndex: 10 }
+    dashboard: { isOpen: false, zIndex: 10 },
+    french_tech_voeux: { isOpen: false, zIndex: 10 }
 };
 
 // Z-index management
@@ -24,7 +25,7 @@ let dragOffset = { x: 0, y: 0 };
 const windowConfigs = {
     contact: { title: 'Contact.exe', icon: 'src/envelope.png', width: 320, height: 520, initialX: 150, initialY: 80 },
     about: { title: 'A_propos.txt', icon: 'src/notepad.png', width: 550, height: 520, initialX: 500, initialY: 100 },
-    projects: { title: 'Projets', icon: 'src/folder.png', width: 550, height: 600, initialX: 250, initialY: 50 }, // J'ai agrandi un peu la hauteur
+    projects: { title: 'Projets', icon: 'src/folder.png', width: 550, height: 600, initialX: 250, initialY: 50 },
     skills: { title: 'Compétences.dat', icon: 'src/computer.png', width: 450, height: 550, initialX: 225, initialY: 80 },
 
     // mes diff° réalisations
@@ -73,6 +74,14 @@ const windowConfigs = {
         title: 'Canidae_Dior_Pub.psd',
         icon: 'src/paint.png',
         width: 500, height: 600, initialX: 250, initialY: 50
+    },
+    french_tech_voeux: {
+        title: 'SAE_302_FrenchTech_Motion.mp4',
+        icon: 'src/paint.png',
+        width: 700,
+        height: 620,
+        initialX: 140,
+        initialY: 60
     }
 };
 
@@ -386,6 +395,19 @@ function getWindowContent(windowId) {
                             <span class="project-tag">Publicité</span>
                         </div>
                     </div>
+
+                    <div class="project-item" onclick="openWindow('french_tech_voeux')" style="cursor: pointer;">
+                        <div class="project-header">
+                            <img src="src/paint.png" class="project-icon" style="background: none; border: none;">
+                            <h3 class="project-title">SAE_302_FrenchTech_Motion.mp4</h3>
+                        </div>
+                        <p class="project-description">Motion design de fin d'année pour que La French Tech souhaite ses voeux à ses collaborateurs.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">After Effects</span>
+                            <span class="project-tag">Motion Design</span>
+                            <span class="project-tag">SAE 302</span>
+                        </div>
+                    </div>
                     
                     <div class="info-box">
                         <p>Cliquez sur un fichier pour l'ouvrir.</p>
@@ -680,6 +702,32 @@ function getWindowContent(windowId) {
             </div>
         `;
 
+    ////  PAGE DÉTAIL : SAE 302 FRENCH TECH  ////
+    case 'french_tech_voeux':
+        return `
+            <div class="window-inner">
+                <h2>SAE 302 - La French Tech</h2>
+                <p><strong>Projet :</strong> Motion design de voeux de fin d'année</p>
+                <p><strong>Durée :</strong>~ 1 minute 30</p>
+                <p><strong>Outil :</strong> After Effects</p>
+
+                <hr style="border: 1px solid #789742; margin: 16px 0;">
+
+                <h3>Contexte</h3>
+                <p>Dans le cadre de la SAE 302, nous devions réaliser un motion design pour que La French Tech souhaite les voeux de fin d'année à l'ensemble de ses collaborateurs.</p>
+
+                <h3>Vidéo</h3>
+                <video controls style="width: 100%; border: 2px solid white; margin-bottom: 12px; background: black;">
+                    <source src="src/Rendu_Final.mp4" type="video/mp4">
+                    Votre navigateur ne prend pas en charge la lecture vidéo.
+                </video>
+                <p style="font-size: 13px; opacity: 0.9;">Placez votre fichier vidéo dans <strong>src/SAE302_FrenchTech.mp4</strong> pour l'afficher ici.</p>
+
+                <br>
+                <button class="ok-button" onclick="closeWindow('french_tech_voeux')">Fermer</button>
+            </div>
+        `;
+
     }
 }
 
@@ -812,10 +860,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const startMenu = document.getElementById('start-menu');
 
     startButton.addEventListener('click', (e) => {
-        e.stopPropagation(); // Empêche de fermer le menu tout de suite
+        e.stopPropagation();
         if (startMenu.style.display === 'none') {
             startMenu.style.display = 'block';
-            startButton.classList.add('active'); // Optionnel: pour garder le bouton enfoncé
+            startButton.classList.add('active');
         } else {
             startMenu.style.display = 'none';
             startButton.classList.remove('active');
